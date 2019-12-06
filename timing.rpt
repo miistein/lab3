@@ -1,0 +1,63 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fir4rca
+Version: K-2015.06-SP2
+Date   : Thu Dec  5 22:22:54 2019
+****************************************
+
+Operating Conditions: WCCOM   Library: tcbn65gpluswc
+Wire Load Model Mode: segmented
+
+  Startpoint: dr_reg_1_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: s_reg_13_ (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir4rca            ZeroWireload          tcbn65gpluswc
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dr_reg_1_/CP (DFQD4)                     0.00       0.00 r
+  dr_reg_1_/Q (DFQD4)                      0.13       0.13 f
+  U186/ZN (INVD4)                          0.02       0.15 r
+  U503/ZN (CKND2D4)                        0.03       0.17 f
+  U502/ZN (ND2D4)                          0.02       0.20 r
+  U424/ZN (CKND4)                          0.02       0.21 f
+  U807/ZN (ND2D4)                          0.02       0.23 r
+  U832/ZN (AOI21D4)                        0.02       0.26 f
+  U486/ZN (NR2D4)                          0.05       0.30 r
+  U802/ZN (OAI21D2)                        0.04       0.34 f
+  U709/ZN (XNR2D4)                         0.09       0.43 f
+  U256/ZN (ND2D2)                          0.02       0.46 r
+  U255/ZN (INVD2)                          0.02       0.48 f
+  U253/ZN (NR2D4)                          0.03       0.51 r
+  U457/ZN (NR2XD3)                         0.03       0.54 f
+  U454/ZN (ND2D4)                          0.03       0.56 r
+  U198/ZN (ND2D2)                          0.03       0.59 f
+  U251/ZN (ND3D2)                          0.02       0.61 r
+  U197/ZN (CKND2D2)                        0.02       0.63 f
+  U194/ZN (NR2XD1)                         0.02       0.65 r
+  s_reg_13_/D (DFD2)                       0.00       0.65 r
+  data arrival time                                   0.65
+
+  clock clk (rise edge)                    0.50       0.50
+  clock network delay (ideal)              0.00       0.50
+  s_reg_13_/CP (DFD2)                      0.00       0.50 r
+  library setup time                      -0.03       0.47
+  data required time                                  0.47
+  -----------------------------------------------------------
+  data required time                                  0.47
+  data arrival time                                  -0.65
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.18
+
+
+1
